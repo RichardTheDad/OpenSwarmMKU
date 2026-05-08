@@ -65,8 +65,38 @@ Check against `clients/[client-name]/brand-guide.md` and `approved-language.md`:
 - [ ] Is the tone consistent with the brand's voice?
 - [ ] Are there any banned phrases from `banned-claims.md` used?
 - [ ] For visual assets: do colors, fonts, and style match the brand guide?
+- [ ] **Text readability:** Is all text in the graphic legible at standard social media display size? (Low contrast, tiny type, or text overlapping busy areas = FLAG)
+- [ ] **CTA strength (visual):** Is the CTA immediately visible and clear? A CTA buried in small text or missing entirely = FLAG
+- [ ] **Style repetition:** If reviewing multiple graphics in the same batch, are they all using the same layout and visual style? Identical-looking ads across a campaign = FLAG: "Repetitive style — campaign lacks visual variety"
+- [ ] **Layout overuse:** Does the graphic default to the dark/gold centered-headline layout when the campaign goal calls for a different approach? (e.g., educational tip post using sports promo layout = mismatch) → FLAG: "Style-goal mismatch — suggest [appropriate style] for this campaign type"
 
-### 5a. Logo Integrity (Graphics Only)
+**Style principle to apply:** "Style should vary by campaign goal. Brand consistency does not mean every ad must look identical." Flag batches where all graphics share the same layout regardless of different campaign goals.
+
+### 5a. Visual Style Quality (Graphics Only)
+
+For every generated graphic, check visual style quality independent of logo and facility rules:
+
+- [ ] **Unreadable text:** Is all text legible at 1080×1080 display size? Check contrast, font size, text-on-texture collisions.
+  - If text is unreadable or borderline → **FLAG: UNREADABLE TEXT — increase contrast or simplify background behind text**
+- [ ] **Weak or missing CTA:** Is the CTA clearly visible and action-oriented?
+  - Missing CTA → **FLAG: NO CTA**
+  - CTA present but buried in small/low-contrast text → **FLAG: WEAK CTA — make CTA visually dominant**
+- [ ] **Repetitive style in batch:** When reviewing 2+ graphics together, do they all use the same layout?
+  - Yes → **FLAG: REPETITIVE STYLE — campaign lacks visual variety. Each graphic should use the style appropriate for its specific campaign goal.**
+- [ ] **Style-goal mismatch:** Does the graphic style match the campaign goal?
+  - e.g., a golf tip post using the dark/gold sports promo layout → **FLAG: STYLE-GOAL MISMATCH — suggest educational tip graphic style instead**
+  - e.g., a simple announcement using a complex layered sports composition → **FLAG: STYLE-GOAL MISMATCH**
+
+Add to QA report section:
+```
+VISUAL STYLE QUALITY:
+- [ ] Text readability: [PASS / FLAG: describe issue]
+- [ ] CTA visibility: [PASS / FLAG: describe issue]
+- [ ] Style repetition (batch): [N/A — single graphic / PASS — varied / FLAG: repetitive]
+- [ ] Style-goal match: [PASS / FLAG: describe mismatch and suggest correct style]
+```
+
+### 5b. Logo Integrity (Graphics Only)
 
 For every generated graphic file, check:
 
@@ -183,6 +213,12 @@ LOCAL RELEVANCE:
 
 BRAND FIT:
 - [Issue] — [What conflicts with the brand guide]
+
+VISUAL STYLE QUALITY (graphics only):
+- Text readability: [PASS / FLAG]
+- CTA visibility: [PASS / FLAG]
+- Style repetition (batch): [N/A / PASS / FLAG]
+- Style-goal match: [PASS / FLAG: describe]
 
 NEEDS CLIENT CONFIRMATION:
 - [Specific claim or detail] — [Why the client needs to confirm this before use]

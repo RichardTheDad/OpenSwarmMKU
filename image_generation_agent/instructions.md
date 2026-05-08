@@ -122,48 +122,114 @@ Save prompt files to `clients/[client-name]/outputs/[month_year]/image-prompts/`
 
 State clearly at the top: "These prompts require an image generation tool. Use with Midjourney, DALL-E, Canva AI, or re-run this request with GOOGLE_API_KEY or OPENAI_API_KEY configured."
 
-### Oxford Golf Academy — Canonical Promo Graphic Style
+### Oxford Golf Academy — Visual Style System
 
-When generating any graphic for Oxford Golf Academy, use this style as the baseline. It reflects the approved visual direction confirmed by client review.
+**Core principle: Style should vary by campaign goal. Brand consistency does not mean every ad must look identical.**
 
-**Canvas:** 1080×1080 px square PNG
+Use the brand guide (colors, typography, voice) as the foundation, but choose the visual style based on the marketing goal of each specific ad. Do not default to the same layout every time.
 
-**Background:**
+**Canvas (default):** 1080×1080 px square PNG. Use 9:16 for Stories/Reels, 3:2 for landscape ads.
+
+---
+
+#### Style Selector — Choose Based on Campaign Goal
+
+| Campaign Goal | Recommended Style |
+|---|---|
+| High-energy service promo, seasonal launch | Premium dark/gold sports promo |
+| Brand awareness, credibility, simple announcement | Clean typography-first ad |
+| Golf instruction tips, how-to content | Educational golf tip graphic |
+| Attracting first-time golfers, low-barrier offer | Beginner-friendly lesson promo |
+| Toptracer launch, tech feature, data highlight | Toptracer/data-inspired ad |
+| Club repair service spotlight | Club repair/service spotlight |
+| Review campaign | Review request graphic |
+| Holiday, local event, community tie-in | Seasonal/local campaign graphic |
+| Class time change, event notice | Simple announcement graphic |
+| Multi-service or program overview | Carousel-style informational graphic |
+| Driving action/sign-ups | Bold CTA-focused promo |
+
+---
+
+#### Style Specs Per Direction
+
+**Premium dark/gold sports promo**
 - Deep charcoal or near-black textured background
-- Warm gold/amber radial glow from center or lower-center
-- Subtle noise or grain texture for depth — no flat solid black
-- No real-world scenes, no facility imagery, no sky, no grass
+- Warm gold/amber radial glow
+- Bold white or gold headline — large, centered
+- Abstract swing arc, golf ball glow, or trajectory lines in gold
+- Gold/amber CTA button, lower-center
+- Use when: high-energy promo, season launch, performance focus
 
-**Typography:**
-- Bold white or warm gold headline — large, centered, dominant
-- Clean sans-serif only — no script, no serif, no display fonts
-- Subhead in smaller white or light gray, 1–2 lines max
-- CTA text: short, verb-led ("Book Your Lesson", "Call Now")
+**Clean typography-first ad**
+- Light or off-white background, or clean mid-tone
+- Bold oversized headline as the primary visual element
+- Minimal graphic elements — thin rule lines, subtle brand icon
+- Strong color contrast between text and background
+- Use when: announcement, simple message, credibility-building
 
-**CTA element:**
-- Gold or amber filled button shape with rounded corners
-- Dark text inside button for contrast
-- Positioned center-bottom or lower-center of the composition
+**Educational golf tip graphic**
+- 2–3 panel or split layout (diagram + tip text)
+- Numbered steps or labeled illustration
+- Clear, readable body text — not just a headline
+- Golf motif icons (club, ball, stance silhouette) as supporting visuals
+- Use when: tips content, instruction-focused, engagement posts
 
-**Golf motifs (optional but preferred):**
-- Abstract swing arc lines in gold/amber — thin, elegant
-- Golf ball close-up with motion blur or glow — no course context
-- Club silhouette or tee icon in subtle gold
-- Toptracer-style shot path lines or data arc overlays
-- No people unless art-directed specifically and clearly abstract
+**Beginner-friendly lesson promo**
+- Warm, welcoming palette — softer than the dark sports style
+- Approachable headline ("Never played before? Start here.")
+- Iconographic or illustrated feel — no intimidating visuals
+- Use when: targeting new golfers, first-lesson offers, low-barrier entry
 
-**What this style is NOT:**
-- Not a luxury resort aesthetic
-- Not a country club heritage look (no crests, no serif traditions, no dark wood paneling)
-- Not a stock-photo sports composite
-- Not a scene-based composition with a real or implied location
+**Toptracer/data-inspired ad**
+- Dark background with neon/electric accent lines (blue, teal, or amber)
+- Shot trajectory arcs, speed callouts, numbered data overlays
+- Tech-forward, clean, precision feel
+- Use when: Toptracer feature, technology differentiator, data-focused content
 
-**Logo placement:**
-- Clean uncluttered zone in upper-left quadrant
-- No objects, text, or glow elements in that area
-- Logo applied via OverlayLogo after generation — never drawn by AI
+**Club repair/service spotlight**
+- Product-focused layout — club graphic or illustrated tool visual front-and-center
+- Clean background, minimal distractions
+- Short benefit-driven headline + CTA
+- Use when: repair service feature, specific service promotion
 
-**Negative prompt to always include for OGA graphics:**
+**Review request graphic**
+- Simple, direct layout — Google or platform icon visible
+- Headline: "Love your experience? Tell us." or equivalent
+- Star motif or rating icon (generic — no fake ratings)
+- Use when: review campaign, post-lesson follow-up
+
+**Seasonal/local campaign graphic**
+- Seasonal color palette (e.g., fall warmth, summer brightness)
+- Reference to Oxford, FL or local community
+- Holiday or event tie-in visual (tasteful, not kitschy)
+- Use when: local holiday, community event, seasonal promotion
+
+**Simple announcement graphic**
+- Clean, low-complexity layout
+- Large readable text, minimal graphics
+- Brand colors but no elaborate design
+- Use when: schedule change, hours notice, quick info update
+
+**Bold CTA-focused promo**
+- CTA is the dominant element — large, impossible to miss
+- Phone number or action phrase takes up 40%+ of the visual
+- Minimal supporting text, no clutter
+- High contrast background and text
+- Use when: driving immediate action — calls, sign-ups, bookings
+
+---
+
+#### Brand Constants Across All Styles
+
+These apply regardless of which style is chosen:
+
+- **Typography:** Clean modern sans-serif only — no script, no ornate serif, no display fonts
+- **Voice on graphic:** Confident, local, practical — not hype-driven, not corporate
+- **CTA:** Always present, always verb-led ("Book", "Call", "Learn", "Sign Up")
+- **Logo zone:** Clean uncluttered space in upper-left (or as appropriate for the layout)
+- **Logo application:** Always via OverlayLogo — never drawn by AI
+
+#### Negative prompt to always include for OGA graphics:
 `no golf course, no fairway, no green, no clubhouse, no driving range building, no luxury resort, no aerial view, no people posed on course, no fake location, no concept draft watermark, no draft label, no status text, no internal notes, no banners, no text overlays except approved graphic copy, no logo drawn by AI, no crest, no badge, no emblem`
 
 ### Facility & Location Imagery — Decision Gate

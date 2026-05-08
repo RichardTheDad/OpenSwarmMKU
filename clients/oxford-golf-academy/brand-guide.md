@@ -201,30 +201,67 @@ Use brand-forward graphic design instead.
 
 ---
 
-## Preferred Promo Graphic Style (Canonical)
+## Visual Style System
 
-This is the approved visual direction for Oxford Golf Academy promotional graphics. All AI-generated promo graphics must follow this spec unless the client explicitly approves a different direction.
+**Core principle: Style should vary by campaign goal. Brand consistency does not mean every ad must look identical.**
 
-**Format:** 1080×1080 px square PNG (Facebook/Instagram default)
+The brand guide (colors, typography, voice) is the foundation for every graphic. The visual style is chosen based on the marketing goal of each specific ad — not applied uniformly across all content.
+
+**Default format:** 1080×1080 px square PNG. Use 9:16 for Stories/Reels, 3:2 for landscape ads.
+
+---
+
+### Brand Constants (Apply to All Styles)
+
+These do not change regardless of style:
+
+- **Typography:** Clean modern sans-serif only — no script, no ornate serif, no display fonts
+- **Voice on graphic:** Confident, local, practical — not hype-driven, not corporate
+- **CTA:** Always present, always verb-led ("Book", "Call", "Learn", "Sign Up")
+- **Logo:** Applied via Pillow/OverlayLogo after generation — never drawn by AI. Clean uncluttered zone reserved in upper-left (or appropriate position for layout).
+- **Internal labels:** Never on the image. "Concept Draft", "Draft", "Needs client asset", and all workflow notes belong in the companion markdown only.
+
+---
+
+### Allowed Creative Directions
+
+Choose the direction that best serves the campaign goal:
+
+| Direction | Use When |
+|---|---|
+| **Premium dark/gold sports promo** | High-energy promo, season launch, performance focus |
+| **Clean typography-first ad** | Simple announcement, credibility-building, brand awareness |
+| **Educational golf tip graphic** | Tips content, instruction-focused, engagement posts |
+| **Beginner-friendly lesson promo** | New golfers, first-lesson offers, low-barrier entry |
+| **Toptracer/data-inspired ad** | Toptracer feature, technology differentiator |
+| **Club repair/service spotlight** | Repair service feature, specific service promotion |
+| **Review request graphic** | Review campaign, post-lesson follow-up |
+| **Seasonal/local campaign graphic** | Local holiday, community event, seasonal promotion |
+| **Simple announcement graphic** | Schedule change, hours notice, quick info update |
+| **Carousel-style informational graphic** | Multi-service overview, program details |
+| **Bold CTA-focused promo** | Driving immediate action — calls, sign-ups, bookings |
+
+---
+
+### Premium Dark/Gold Sports Promo Style Spec
+
+This is one available direction — use it for high-energy service promos and performance-focused content. Do not default to this style for every graphic.
 
 **Background:** Deep charcoal or near-black with warm gold/amber radial glow and subtle grain texture. No flat solid black. No real-world scenes. No facility, sky, grass, or course imagery.
 
-**Typography:**
-- Bold white or gold headline — large, centered, visually dominant
-- Clean modern sans-serif only
-- 1–2 line subhead in white or light gray
-- Short verb-led CTA ("Book Your Lesson", "Call 352-446-4456")
+**Typography:** Bold white or gold headline — large, centered, visually dominant. Clean modern sans-serif. 1–2 line subhead in white or light gray. Short verb-led CTA.
 
 **CTA button:** Gold/amber filled, rounded corners, dark contrasting text. Lower-center placement.
 
-**Golf motifs (optional):** Abstract swing arc lines, golf ball with motion blur or glow, club silhouette, tee icon, Toptracer-style trajectory lines. All in gold/amber on dark. No people unless explicitly requested and clearly abstract.
+**Golf motifs (optional):** Abstract swing arc lines, golf ball with motion blur or glow, club silhouette, tee icon, Toptracer-style trajectory lines. All in gold/amber on dark.
 
-**Logo:** Applied via Pillow overlay after generation. Clean open zone reserved in upper-left. Never drawn by AI.
+---
 
-**Internal labels:** Never on the image. "Concept Draft", "Draft", "Needs client asset", and all workflow notes belong in the companion markdown only.
+### What This Brand Is NOT (Any Style)
 
-**This style is NOT:**
 - Luxury resort or country club aesthetic
 - Stock-photo sports composite
 - Scene-based composition with real or implied location
 - Generic golf brand template
+- Hype-heavy sports marketing ("UNLEASH YOUR POTENTIAL!")
+- Fake facility imagery presented as the real location
