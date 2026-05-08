@@ -158,11 +158,16 @@ Paste these into the terminal when the swarm is running:
 ## API Keys Reference
 
 **Required (choose one):**
-- `OPENAI_API_KEY` — for GPT models
+- `OPENAI_API_KEY` — for GPT models and OpenAI web search
 - `ANTHROPIC_API_KEY` — for Claude models
 
-**For research:**
-- `SEARCH_API_KEY` — enables web search for market research
+**Web search (built-in with OpenAI):**
+- Web search for the Local Market Research Agent uses the **OpenAI Responses API** (`web_search` tool)
+- Only `OPENAI_API_KEY` is needed — no separate search key required
+- Configured in `deep_research/tools/OpenAIWebSearchTool.py`
+
+**Optional — academic search only:**
+- `SEARCH_API_KEY` (SearchAPI.io) — only needed if you want `ScholarSearch` for academic papers. Not used in normal marketing workflows.
 
 **For visual assets:**
 - `GOOGLE_API_KEY` — Gemini image generation

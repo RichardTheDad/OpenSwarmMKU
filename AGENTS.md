@@ -131,6 +131,30 @@ shared_tools/             ← Tools available to all agents
 
 ---
 
+## Web Search Setup
+
+The **Local Market Research Agent** uses **OpenAI Responses API web search**.
+
+| What it needs | Details |
+|---|---|
+| `OPENAI_API_KEY` | Required — already in `.env` |
+| `SEARCH_API_KEY` | **Not required** for OpenAI web search |
+| Model | Any OpenAI model that supports the Responses API (`gpt-4o`, `gpt-4o-mini`, `gpt-5.x`) |
+
+**How it works:**
+- `WebSearchTool(search_context_size="high")` from the OpenAI Agents SDK
+- The model calls `web_search` natively via the Responses API — no external service
+- Source URLs are returned automatically via `response_include=["web_search_call.action.sources"]`
+- Configured in `deep_research/tools/OpenAIWebSearchTool.py`
+
+**Search budget (enforced in instructions):**
+- 0 searches for basic caption/rewrite tasks using client files
+- 0–3 searches for normal monthly content package support
+- 3–5 searches for competitor research briefs
+- 5–8 searches for full local market research reports
+
+**`SEARCH_API_KEY` (SearchAPI.io):** Only needed for `ScholarSearch` (academic papers). Not used in the marketing swarm. The agent that had ScholarSearch (`virtual_assistant`) has it available as a fallback if you later add the key.
+
 ## Key Conventions
 
 - Each agent folder has one `<name>.py` and one `instructions.md`
