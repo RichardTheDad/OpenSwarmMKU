@@ -223,11 +223,26 @@ Save generated graphics to clients/oxford-golf-academy/outputs/may_2026/graphics
 
 Without the explicit request, the agent produces concepts only (no images generated, no API cost).
 
+### Logo Workflow — AI Never Draws the Logo
+
+Client logos are NEVER passed to or recreated by any AI image model. AI models redraw logos incorrectly — wrong colors, wrong text, wrong shape.
+
+**Correct workflow (enforced in agent instructions):**
+
+1. `GenerateImages` creates the background only — prompt says "leave upper-left corner clear for logo"
+2. `OverlayLogo` composites the real logo file onto the background using Pillow — no AI involved
+3. Two files are saved: `[name]_final.png` (with logo) and `[name]_final_raw_bg.png` (background only)
+
+**Logo file location:** `clients/[client-name]/assets/logo.png`
+
+If no `logo.png` exists, the agent generates the background and writes "Logo overlay pending — add official logo to assets/" in the markdown output. It does NOT attempt to draw the logo.
+
+**The Marketing QA Agent checks every graphic** for AI-redrawn logos and flags them automatically.
+
 ### Notes
 
 - AI-generated text inside images is often broken — always check before use
 - Generated images are drafts — a human must review before sending to any client
-- If brand assets (logo, real photos) are missing, the agent uses safe branded layouts and flags "Needs client asset"
 - The existing markdown content package is never replaced — graphics are separate additional files
 
 ---

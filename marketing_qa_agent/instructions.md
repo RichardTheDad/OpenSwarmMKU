@@ -66,6 +66,23 @@ Check against `clients/[client-name]/brand-guide.md` and `approved-language.md`:
 - [ ] Are there any banned phrases from `banned-claims.md` used?
 - [ ] For visual assets: do colors, fonts, and style match the brand guide?
 
+### 5a. Logo Integrity (Graphics Only)
+
+For every generated graphic file, check:
+- [ ] **Logo source:** Is the logo the real file from `clients/[client-name]/assets/logo.png`, overlaid via `OverlayLogo`? Or does it appear AI-generated/redrawn?
+- [ ] **AI-redrawn logo flag:** If the logo looks blurry, distorted, stylized, or has incorrect text/colors compared to the real asset — flag as **LOGO REDRAWN BY AI — must regenerate using OverlayLogo**
+- [ ] **No internal labels burned in:** The graphic must not contain text like "Concept Draft," "Needs client asset," "No offers on file," or any other internal workflow note
+- [ ] **Raw background exists:** A `_raw_bg.png` file should exist alongside every `_final.png`
+- [ ] **Logo pending note:** If no `logo.png` exists in assets, the markdown output should say "Logo overlay pending" — and no logo should appear on the graphic at all
+
+Add to QA report section:
+```
+LOGO INTEGRITY:
+- [ ] Logo appears real (from assets/) vs AI-generated: [REAL / AI-REDRAWN / ABSENT]
+- [ ] Internal labels on graphic: [NONE / FOUND — list them]
+- [ ] Raw background file present: [YES / NO]
+```
+
 ### 6. Platform Appropriateness
 
 Check:
