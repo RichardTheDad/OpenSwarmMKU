@@ -1,0 +1,8 @@
+PROMPT 2 — Oxford Golf Academy graphic regeneration
+Create a 1080x1080 square promotional graphic for Oxford Golf Academy using the redesigned brand look: dark premium background, warm amber/gold accents, modern sans-serif typography, spacious layout, clean and trustworthy.
+
+Headline: Practice with Toptracer
+Subhead: See your shot data in real time
+CTA: Visit the Range
+
+Use clean abstract golf/range visuals only. Avoid fake people, fake facility photos, clutter, stock-photo styling, internal notes, prices, offers, event dates, testimonials, or guarantees. Keep all text fully visible with safe margins. No old website styling.

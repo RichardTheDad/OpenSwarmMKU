@@ -1,0 +1,9 @@
+PROMPT 2 — Oxford Golf Academy Toptracer promo
+Create a 1080x1080 square promotional graphic for Oxford Golf Academy using the redesigned brand look: dark premium background, warm amber/gold accents, modern sans-serif typography, spacious card layout, clean and trustworthy, not country-club traditional, not stock-photo heavy.
+
+Headline: Practice with Toptracer
+Subhead: See your shot data in real time
+CTA: Explore Programs
+Footer note: Needs client asset
+
+Use a subtle abstract practice-range visual treatment with a refined tech feel, no fake testimonials, no prices, no event dates, and no guarantees. No old website styling.
