@@ -98,13 +98,14 @@ State clearly at the top: "These prompts require an image generation tool. Use w
 1. Write a detailed, 50+ word generation prompt for the specific asset
 2. Call `GenerateImages` with:
    - `product_name`: the client folder name (e.g., `oxford-golf-academy`)
-   - `file_name`: a clear descriptive name (e.g., `oga_toptracer_social_may2026_1`)
+   - `file_name`: a simple filename with NO path separators (e.g., `oga_toptracer_social_may2026_1`). Never include slashes or folder paths here — that causes incorrect nesting.
    - `model`: `gemini-2.5-flash-image` for social posts; `gemini-3-pro-image-preview` for ad creatives and hero images
    - `aspect_ratio`: match the platform (`1:1` for Instagram/Facebook square, `9:16` for Reels/Stories, `3:2` for landscape Facebook, `4:5` for Facebook feed portrait)
 3. After generation, the image is saved to `mnt/[client-name]/generated_images/[file_name].png`
 4. Use `CopyFile` to copy each generated image to the client output folder:
-   - **Source:** the path returned by `GenerateImages` (shown in tool output as "Path: ...")
+   - **Source:** the exact path returned by `GenerateImages` (shown in tool output as "Path: ...")
    - **Destination:** `clients/[client-name]/outputs/[month_year]/graphics/`
+   - Do NOT pass the destination path as `file_name` to `GenerateImages` — always generate first, then copy.
 5. Run a QC check after generation:
    - Does it match the brand colors and aesthetic? (check brand-guide.md)
    - Does any text in the image look correct? (AI-generated text is often broken — flag it)

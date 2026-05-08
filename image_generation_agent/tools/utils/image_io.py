@@ -142,9 +142,9 @@ def save_image(image: Image.Image, output_name: str, images_dir: Path) -> tuple[
 
 def image_to_base64_jpeg(
     image: Image.Image,
-    max_size: int = 768,
-    target_bytes: int = 120_000,
-    min_quality: int = 45,
+    max_size: int = 384,
+    target_bytes: int = 30_000,
+    min_quality: int = 35,
 ) -> str:
     """
     Create a compact JPEG preview for multimodal outputs.

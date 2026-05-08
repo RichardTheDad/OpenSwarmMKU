@@ -1,9 +1,0 @@
-PROMPT 1 — Oxford Golf Academy lesson promo
-Create a 1080x1080 square promotional graphic for Oxford Golf Academy using the redesigned brand look: dark premium background, warm amber/gold accents, modern sans-serif typography, spacious card layout, clean and trustworthy, not country-club traditional, not stock-photo heavy.
-
-Headline: Golf Lessons in Oxford
-Subhead: Clear coaching for real improvement
-CTA: Book Your Lesson
-Footer note: Needs client asset
-
-Use a subtle abstract golf-range visual treatment with soft glow, minimal line work, and polished contrast. Avoid fake testimonials, prices, event dates, and guarantees. No old website styling.
