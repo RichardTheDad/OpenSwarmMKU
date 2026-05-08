@@ -1,126 +1,181 @@
 <div align="center">
 
-# 🚀 OpenSwarm
+# Small Business Marketing Swarm
 
 ![OpenSwarm](assets/new-framework.jpg)
 
 </div>
 
-**The fully open-source multi-agent system that does everything Claude Code can't.**
+**A human-reviewed multi-agent marketing system for local small businesses.**
 
-Create polished slide decks, research reports, data visualizations, documents, images, and videos — all from a single prompt in your terminal. No platform, no UI, no setup hassles.
+Creates monthly content packages, social media posts, ad creatives, SEO content, Google Business Profile updates, video scripts, and monthly reports — all drafted for human review before anything reaches a client or gets posted.
 
-✨ **One prompt → Complete deliverables**
-🎯 **8 specialized agents working together**
-⚡ **Install in 30 seconds, running in 60**
-🔧 **100% customizable and forkable**
-
-Built on [Agency Swarm](https://github.com/VRSEN/agency-swarm) — the framework powering real AI agencies.
+Built on [Agency Swarm](https://github.com/VRSEN/agency-swarm).
 
 ---
 
-> 💼 **Investor or looking to integrate AI agents into your SaaS?**
-> We're the team behind OpenSwarm and Agency Swarm, building the future of multi-agent systems.
-> **[Partner with us →](https://vrsen-ai.notion.site/fee2d391a8d74b24baa04a0b648af83c?pvs=105)**
+## How It Works
+
+8 specialist agents collaborate to create marketing deliverables. A human reviews everything. Nothing is posted automatically.
+
+```
+You → Marketing Director → Specialists → QA Review → You review → Client
+```
+
+**Key rules baked into every agent:**
+- No automatic posting or publishing
+- No invented prices, offers, testimonials, events, or guarantees
+- Content must be specific to the local business — no generic AI filler
+- Every post must have a clear purpose and CTA
+- Everything is a draft until you approve it
 
 ---
 
-## 💡 What Makes This Different?
+## The Team
 
-Instead of one agent trying to do everything poorly, you get **specialists coordinated by an orchestrator**.
-
-### 🎯 Real Examples
-
-Paste these into your terminal and watch magic happen:
-
-- **"Create a complete investor pitch for OpenSwarm"** → Full deck + executive summary + market research
-- **"Research my top 5 competitors and write 3 SEO-optimized blog posts"** → Competitive analysis + keyword research + publish-ready content
-- **"Analyze this data and create a quarterly report with charts"** → Data insights + visualizations + formatted document
-- **"Generate a product launch video with animations"** → Professional video with graphics and transitions
-- **"Build me a marketing campaign for Q2"** → Strategy doc + creative assets + implementation timeline
-
-Connect to 10,000+ external services (Gmail, Slack, GitHub, HubSpot) via Composio for even more power.
+| Agent | What it does |
+|---|---|
+| **Marketing Director** | Entry point. Routes client requests to the right specialists. Assembles the final package. |
+| **Local Market Research Agent** | Researches local competitors, customer search intent, local SEO keywords, and seasonal content angles. Always cites sources. |
+| **Content Copywriter** | Writes Facebook posts, Google Business Profile posts, blog drafts, ad copy, email/newsletter copy, and website marketing copy. Avoids generic AI language. |
+| **Creative Asset Agent** | Creates graphic concepts, image-generation prompts, promo graphic ideas, and ad creative concepts. Generates actual AI images when needed. |
+| **Short-Form Video Agent** | Writes reel scripts, shot lists, voiceover scripts, and text overlay plans. Designed for phone-filmable content. |
+| **Marketing Report Agent** | Turns real website/social/GBP data into readable monthly reports. Never invents or estimates numbers. |
+| **Client Ops Agent** | Organizes deliverables, content calendars, approval checklists, and client packages. Does not post anything without explicit instruction. |
+| **Marketing QA Agent** | Reviews all deliverables before you see them — checks for fake claims, generic AI language, missing CTAs, and brand inconsistencies. |
 
 ---
 
-## 🤖 Meet Your AI Team
+## Client Folder Structure
 
-| Agent                      | What it does                                                                                                                                                                                 |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Orchestrator**           | Routes every user request to the right specialist(s). Never answers directly — pure coordination.                                                                                            |
-| **Virtual Assistant**      | Handles everyday tasks: writing, scheduling, messaging, task management. Gains 10,000+ external integrations via [Composio](https://composio.dev) (Gmail, Slack, GitHub, HubSpot, and more). |
-| **Deep Research**          | Conducts comprehensive, evidence-based web research with citations and balanced analysis.                                                                                                    |
-| **Data Analyst**           | Analyses structured data, builds charts, runs statistical models — all inside an isolated IPython kernel.                                                                                    |
-| **Slides Agent**           | Generates complete, visually polished HTML slide decks, then exports them to PPTX.                                                                                                           |
-| **Docs Agent**             | Creates formatted Word documents and PDFs from outlines or raw content.                                                                                                                      |
-| **Image Generation Agent** | Generates and edits images using Gemini 2.5 Flash Image / Gemini 3 Pro Image and fal.ai.                                                                                                     |
-| **Video Generation Agent** | Produces videos via Sora (OpenAI), Veo (Google), and Seedance (fal.ai); also edits and combines clips.                                                                                       |
+Each client gets their own folder:
+
+```
+clients/
+  your-client-name/
+    client-brief.md       ← Business overview, target customer, tone, goals
+    brand-guide.md        ← Colors, fonts, logo, visual style
+    services.md           ← Exact services offered (only these get written about)
+    offers.md             ← Current confirmed promotions (empty = no offers)
+    testimonials.md       ← Real approved customer quotes
+    approved-language.md  ← Phrases to use
+    banned-claims.md      ← What never to say or imply
+    assets/               ← Client logos, photos, brand files
+    outputs/              ← All generated content (your review queue)
+```
+
+**To add a new client:** copy `clients/example-client/`, rename it, and fill in the files.
 
 ---
 
-## 📦 Get Started in 30 Seconds
+## Getting Started
 
-**For most users (recommended):**
+### 1. Install Dependencies
+
+```bash
+git clone https://github.com/VRSEN/openswarm.git
+cd openswarm
+pip install -r requirements.txt
+```
+
+Or use the npm installer:
 
 ```bash
 npm install -g @vrsen/openswarm
 openswarm
 ```
 
-That's it! The setup wizard handles everything: authentication, dependencies, and configuration.
+### 2. Add API Keys
 
-**Requirements:** Node.js 20+ (Python 3.10+ auto-installed)
+Copy `.env.example` to `.env` and add your keys:
 
-## 🔧 Build Your Own Swarm
-
-Fork this repo and create your own specialized AI team in minutes:
-
-```bash
-git clone https://github.com/VRSEN/openswarm.git
-cd openswarm
+```
+OPENAI_API_KEY=...          # Required (or use ANTHROPIC_API_KEY for Claude)
+ANTHROPIC_API_KEY=...       # For Claude models
+SEARCH_API_KEY=...          # For web research
+GOOGLE_API_KEY=...          # For AI image and video generation
+FAL_KEY=...                 # For additional video generation
+COMPOSIO_API_KEY=...        # For Google Analytics, Drive, Sheets integrations
 ```
 
-Then tell **Claude Code**, **Cursor**, or **Codex**:
+### 3. Set Up a Client
 
-> _"Turn this into an SEO optimization swarm"_
+1. Copy `clients/example-client/` to `clients/[your-client-name]/`
+2. Fill in `client-brief.md`, `services.md`, and `brand-guide.md` at minimum
+3. Add any current offers to `offers.md` (leave empty if none)
+4. Add approved testimonials to `testimonials.md`
+5. Fill in `banned-claims.md` with anything that must never be said
 
-They'll automatically customize all agents for your use case.
+### 4. Run the Swarm
 
-**Popular custom swarms:**
+```bash
+python swarm.py
+```
 
-- **SEO Swarm:** Keyword research + competitor analysis + blog writing
-- **Sales Swarm:** Lead research + outreach + proposal generation
-- **Marketing Swarm:** Campaign planning + creative assets + analytics
-- **Product Swarm:** Market research + feature specs + launch materials
+Or via API server:
 
-## ⚙️ API Keys & Setup
-
-The setup wizard walks you through everything, but you'll need at least one of these:
-
-**Required (choose one):**
-
-- `OPENAI_API_KEY` - For GPT 5.5 and Sora video generation
-- `ANTHROPIC_API_KEY` - For Claude models
-
-**Optional superpowers:**
-
-- `COMPOSIO_API_KEY` - Unlock 10,000+ integrations (Gmail, Slack, GitHub, etc.)
-- `GOOGLE_API_KEY` - Gemini image generation + Veo video
-- `FAL_KEY` - Advanced video editing and effects
-- `SEARCH_API_KEY` - Web search for research agent
-
-Tools gracefully degrade when keys are missing — you'll get clear instructions on what to add.
+```bash
+python server.py   # Runs on localhost:8080
+```
 
 ---
 
-## 🚀 Coming Soon
+## Example Requests
 
-- **Agent Builder Agent** - Create custom swarms from a single prompt
-- **OpenClaw + Claude Code integration** - All agents in one place
+Paste these into the terminal when the swarm is running:
 
-⭐ **Star us on GitHub** to stay updated and help us prioritize features!
+**Monthly content package:**
+> "Create a full monthly content package for [client name]. Their brief is at clients/[client-name]/. I need 8 Facebook posts, 4 GBP updates, 1 blog draft, and 2 reel scripts for June."
 
-## 🏗️ For Developers
+**One-off post:**
+> "Write a Facebook post for [client name] about their summer special. Client files are at clients/[client-name]/."
+
+**Local market research:**
+> "Research local competitors for [client name], a [business type] in [city]. Save the research brief to their client folder."
+
+**Monthly report:**
+> "Here's [client name]'s Google Analytics export and GBP data for May. Create their monthly marketing report."
+
+**Ad campaign:**
+> "Create Facebook ad copy and a graphic concept for [client name]'s [service] campaign. Budget is $[X]/day."
+
+---
+
+## Workflow: Monthly Content Package
+
+1. Fill in the client folder (15-20 minutes the first time, 5 minutes to update monthly)
+2. Ask the Marketing Director to create the monthly package
+3. Specialists run in parallel — research, copy, visuals, video scripts
+4. Client Ops Agent organizes everything into a dated delivery folder
+5. Marketing QA Agent reviews all content
+6. You review the final package in `clients/[client-name]/outputs/`
+7. Edit anything you want, then deliver to the client
+
+**Total review time:** typically 20-30 minutes per client per month
+
+---
+
+## API Keys Reference
+
+**Required (choose one):**
+- `OPENAI_API_KEY` — for GPT models
+- `ANTHROPIC_API_KEY` — for Claude models
+
+**For research:**
+- `SEARCH_API_KEY` — enables web search for market research
+
+**For visual assets:**
+- `GOOGLE_API_KEY` — Gemini image generation
+- `FAL_KEY` — Seedance video generation
+
+**For integrations:**
+- `COMPOSIO_API_KEY` — Google Analytics, Google Drive, Google Sheets, Meta integrations
+
+All tools degrade gracefully when keys are missing.
+
+---
+
+## For Developers
 
 **Local development:**
 
@@ -130,33 +185,22 @@ cd openswarm
 python swarm.py
 ```
 
-**Docker deployment:**
+**Docker:**
 
 ```bash
-git clone https://github.com/VRSEN/openswarm.git
-cd openswarm
-cp .env.example .env        # Add your API keys
+cp .env.example .env
 docker-compose up --build
 ```
 
-**API server:**
-
-```bash
-python server.py           # Runs on localhost:8080
-```
+See [AGENTS.md](AGENTS.md) for the full customization guide.
 
 ---
 
-## 📺 Learn More
+## Built On
 
-- **Watch the full demo:** [YouTube video →](https://youtu.be/c5DdXzqaeVU?si=rM2CNaZ8qVwMvqmz)
-- **Multi-agent framework:** [Agency Swarm](https://github.com/VRSEN/agency-swarm)
-- **External integrations:** [Composio](https://composio.dev)
+- [Agency Swarm](https://github.com/VRSEN/agency-swarm) — multi-agent framework
+- [Composio](https://composio.dev) — external integrations
 
----
-
-## 📄 License
+## License
 
 MIT — see [LICENSE](LICENSE).
-
-**Built with ❤️ by the team behind [Agency Swarm](https://github.com/VRSEN/agency-swarm)**

@@ -16,8 +16,12 @@ instructions_path = os.path.join(current_dir, "instructions.md")
 
 def create_data_analyst() -> Agent:
     return Agent(
-        name="Data Analyst",
-        description="Advanced data analytics agent that generates charts and provides actionable insights.",
+        name="Marketing Report Agent",
+        description=(
+            "Turns website traffic, social media, Google Business Profile, and ad performance data into "
+            "clear monthly reports for local small businesses. Never fakes or estimates numbers. "
+            "Explicitly flags missing data."
+        ),
         instructions=instructions_path,
         tools_folder=os.path.join(current_dir, "tools"),
         model=get_default_model(),
@@ -38,9 +42,9 @@ def create_data_analyst() -> Agent:
             response_include=["web_search_call.action.sources"] if is_openai_provider() else None,
         ),
         conversation_starters=[
-            "Analyze this CSV file and show me the key trends.",
-            "Create a dashboard with charts from my sales data.",
-            "Connect to my Google Analytics and summarize last month's traffic.",
-            "Find hidden patterns in this dataset and visualize them.",
+            "Generate a monthly marketing report for [client name] using this data.",
+            "Analyze this month's Google Business Profile stats for [client name].",
+            "Create a performance summary chart from this social media export.",
+            "Build a monthly report from these GA4 and Meta data exports.",
         ],
     )

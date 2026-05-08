@@ -18,8 +18,12 @@ IPythonInterpreter.__name__ = "ProgrammaticToolCalling"
 
 def create_virtual_assistant() -> Agent:
     return Agent(
-        name="General Agent",
-        description="Your virtual assistant that connects to 10000+ external systems.",
+        name="Client Ops Agent",
+        description=(
+            "Organizes marketing deliverables, builds content calendars, manages approval checklists, "
+            "assembles monthly client packages, and handles client notes. "
+            "Does not post or publish anything without explicit instruction."
+        ),
         instructions="./instructions.md",
         files_folder="./files",
         tools_folder="./tools",
@@ -39,10 +43,10 @@ def create_virtual_assistant() -> Agent:
             SearchTools,
         ],
         conversation_starters=[
-            "Send a summary of my unread emails to Slack.",
-            "Schedule a meeting with my team for next Monday.",
-            "What external systems do I have connected?",
-            "Draft and send a follow-up email to my last meeting attendees.",
+            "Build a content calendar for [client name] for [month].",
+            "Create an approval checklist for [client name]'s monthly package.",
+            "Organize all outputs in clients/[client-name]/outputs/ into a delivery folder.",
+            "Set up a new client folder for [client name].",
         ],
     )
 

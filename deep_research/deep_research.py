@@ -8,8 +8,11 @@ from config import get_default_model, is_openai_provider
 
 def create_deep_research() -> Agent:
     return Agent(
-        name="Deep Research Agent",
-        description="Comprehensive deep research agent that conducts thorough research on any topic.",
+        name="Local Market Research Agent",
+        description=(
+            "Researches local competitors, customer search intent, local SEO keywords, seasonal content "
+            "angles, and content opportunities for small businesses. Always cites sources."
+        ),
         instructions="./instructions.md",
         files_folder="./files",
         tools=[WebSearchTool(), ScholarSearch, IPythonInterpreter],
@@ -19,9 +22,9 @@ def create_deep_research() -> Agent:
             response_include=["web_search_call.action.sources"] if is_openai_provider() else None,
         ),
         conversation_starters=[
-            "Research the latest trends in renewable energy for 2026.",
-            "Give me a comprehensive analysis of the AI agent market landscape.",
-            "Find recent academic papers on large language model reasoning.",
-            "Compare the top 5 project management tools with pros and cons.",
+            "Research local competitors for a [business type] in [city].",
+            "Find local SEO keyword opportunities for a [business type] in [city].",
+            "What seasonal content angles are coming up for a [business type]?",
+            "What are customers in [city] searching for when they need [service]?",
         ],
     )

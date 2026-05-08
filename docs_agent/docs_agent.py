@@ -33,8 +33,12 @@ def _build_instructions() -> str:
 
 def create_docs_agent() -> Agent:
     return Agent(
-        name="Docs Agent",
-        description="Professional Document Engineer specializing in creating, editing, and converting files to multiple formats (PDF, Markdown, TXT, DOCX).",
+        name="Content Copywriter",
+        description=(
+            "Writes marketing copy for local small businesses: Facebook posts, Google Business Profile posts, "
+            "blog drafts, ad copy, email/newsletter copy, and website marketing copy. Avoids generic AI language. "
+            "Never invents prices, guarantees, testimonials, events, or offers."
+        ),
         instructions=_build_instructions(),
         files_folder="./files",
         tools_folder="./tools",
@@ -45,10 +49,10 @@ def create_docs_agent() -> Agent:
         ),
         tools=[WebSearchTool(), IPythonInterpreter, CopyFile],
         conversation_starters=[
-            "Draft Week 34 client status report with a table and export as PDF.",
-            "Create a one-page AI chatbot proposal and export as DOCX.",
-            "Create a product launch executive memo in HTML.",
-            "Write an onboarding SOP for a remote operations coordinator and deliver as Markdown.",
+            "Write 4 Facebook posts for [client name] for [month].",
+            "Draft a Google Business Profile post for [client name] about [topic].",
+            "Write ad copy for a Facebook campaign for [client name].",
+            "Create a monthly content package document for [client name].",
         ],
     )
 

@@ -28,29 +28,29 @@ def create_agency(load_threads_callback=None):
     from virtual_assistant import create_virtual_assistant
     from deep_research import create_deep_research
     from data_analyst_agent import create_data_analyst
-    from slides_agent import create_slides_agent
     from docs_agent import create_docs_agent
     from video_generation_agent import create_video_generation_agent
     from image_generation_agent import create_image_generation_agent
+    from marketing_qa_agent import create_marketing_qa_agent
 
     orchestrator = create_orchestrator()
     virtual_assistant = create_virtual_assistant()
     deep_research = create_deep_research()
     data_analyst = create_data_analyst()
-    slides_agent = create_slides_agent()
     docs_agent = create_docs_agent()
     video_generation_agent = create_video_generation_agent()
     image_generation_agent = create_image_generation_agent()
+    marketing_qa_agent = create_marketing_qa_agent()
 
     all_agents = [
         orchestrator,
         virtual_assistant,
-        slides_agent,
         deep_research,
         data_analyst,
         docs_agent,
         video_generation_agent,
         image_generation_agent,
+        marketing_qa_agent,
     ]
 
     send_message_flows = [
@@ -69,7 +69,7 @@ def create_agency(load_threads_callback=None):
     agency = Agency(
         *all_agents,
         communication_flows=send_message_flows + handoff_flows,
-        name="OpenSwarm",
+        name="Small Business Marketing Swarm",
         shared_instructions="shared_instructions.md",
         load_threads_callback=load_threads_callback,
     )

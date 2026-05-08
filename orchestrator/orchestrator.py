@@ -9,10 +9,11 @@ load_dotenv()
 
 def create_orchestrator() -> Agent:
     return Agent(
-        name="Orchestrator",
+        name="Marketing Director",
         description=(
-            "Primary coordinator that plans multi-agent workflows, runs independent workstreams in parallel, "
-            "and hands off to a specialist when tight user iteration is needed."
+            "Primary coordinator for the Small Business Marketing Swarm. Routes client marketing requests "
+            "to specialist agents, assembles deliverable packages, and ensures nothing reaches a client "
+            "without human review."
         ),
         instructions="./instructions.md",
         model=get_default_model(),
@@ -20,10 +21,10 @@ def create_orchestrator() -> Agent:
             reasoning=Reasoning(effort="medium", summary="auto") if is_openai_provider() else None,
         ),
         conversation_starters=[
-            "What can this agency do?",
-            "Build a full launch package: research, slides, docs, and creative assets.",
-            "Analyze my data and then turn insights into a polished executive deck.",
-            "Coordinate a workflow for proposal doc + promo visuals + short product video.",
+            "Create a monthly content package for [client name].",
+            "Write a Facebook post and GBP update for [client name] this week.",
+            "Run a full local market research brief for a new client.",
+            "Assemble the monthly marketing report for [client name] using this month's data.",
         ],
     )
 
