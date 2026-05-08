@@ -78,4 +78,4 @@ def create_agency(load_threads_callback=None):
 
 if __name__ == "__main__":
     agency = create_agency()
-    agency.tui(show_reasoning=True, reload=False)
+    agency.tui(show_reasoning=False, reload=False)
