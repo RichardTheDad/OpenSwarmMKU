@@ -180,6 +180,58 @@ All tools degrade gracefully when keys are missing.
 
 ---
 
+## Graphic Generation
+
+The Creative Asset Agent supports three output modes depending on what you ask for and which API keys are available.
+
+### Mode 1: Graphic Concepts (default)
+
+No API key needed. The agent writes a detailed description of what each graphic should look like — layout, colors, text, CTA — ready to hand to a designer or build in Canva.
+
+Saved to: `clients/[client-name]/outputs/[month_year]/graphic-concepts/`
+
+### Mode 2: Image-Generation Prompts
+
+No API key needed. The agent writes detailed prompts formatted for Midjourney, DALL-E, or Canva AI — ready to paste directly into any image generation tool.
+
+Saved to: `clients/[client-name]/outputs/[month_year]/image-prompts/`
+
+### Mode 3: Actual Generated Image Files
+
+**Requires `GOOGLE_API_KEY`** (Gemini) or **`OPENAI_API_KEY`** (OpenAI gpt-image-1.5).
+
+The agent generates real PNG files and saves them directly into the client output folder. Generated images must be reviewed by a human before client delivery — they are never sent automatically.
+
+Saved to: `clients/[client-name]/outputs/[month_year]/graphics/`
+
+**Models available:**
+| Model | Key Required | Best For |
+|---|---|---|
+| `gemini-2.5-flash-image` | `GOOGLE_API_KEY` | Social media posts, quick concepts |
+| `gemini-3-pro-image-preview` | `GOOGLE_API_KEY` | Ad creatives, hero images |
+| `gpt-image-1.5` | `OPENAI_API_KEY` | High-quality output (1:1, 2:3, 3:2 only) |
+
+### How to Request Actual Graphics
+
+In your swarm prompt, explicitly ask for generated image files:
+
+```
+Create a full monthly content package for Oxford Golf Academy — client files at clients/oxford-golf-academy/.
+I need 8 Facebook posts, 4 GBP updates, and generate actual image files for the top 3 Facebook posts.
+Save generated graphics to clients/oxford-golf-academy/outputs/may_2026/graphics/.
+```
+
+Without the explicit request, the agent produces concepts only (no images generated, no API cost).
+
+### Notes
+
+- AI-generated text inside images is often broken — always check before use
+- Generated images are drafts — a human must review before sending to any client
+- If brand assets (logo, real photos) are missing, the agent uses safe branded layouts and flags "Needs client asset"
+- The existing markdown content package is never replaced — graphics are separate additional files
+
+---
+
 ## For Developers
 
 **Local development:**

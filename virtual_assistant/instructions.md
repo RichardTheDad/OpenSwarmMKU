@@ -93,6 +93,23 @@ PREPARED BY: [Date]
 3. Generate an index file: `package_index.md` listing all contents with file paths and approval status
 4. Note any items still awaiting approval
 
+The `package_index.md` must include a **Graphics** section that lists each graphic asset separately by type:
+
+```
+## Graphics
+
+### Generated Image Files
+- [ ] [file_name].png — [description] — clients/[client-name]/outputs/[month_year]/graphics/[file_name].png — NEEDS HUMAN REVIEW
+
+### Graphic Concepts (for designer/Canva)
+- [ ] concept_[name].md — [description] — clients/[client-name]/outputs/[month_year]/graphic-concepts/concept_[name].md
+
+### Image-Generation Prompts (if images not generated)
+- [ ] prompt_[name].md — [description] — clients/[client-name]/outputs/[month_year]/image-prompts/prompt_[name].md — Run in Midjourney/DALL-E/Canva AI
+```
+
+If no actual image files were generated, note: "No generated image files in this package. See image-prompts/ folder for prompts ready to use in external tools, or re-request with GOOGLE_API_KEY configured."
+
 ## For Client Intake / Notes
 
 When a new client is being set up, help populate the client folder template:

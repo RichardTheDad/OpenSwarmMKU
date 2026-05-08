@@ -71,9 +71,11 @@ CTA ELEMENT: [Button, link, or action text]
 NOTES: [Anything the designer needs to know]
 ```
 
-### For Image-Generation Prompts
+Save concepts to `clients/[client-name]/outputs/[month_year]/graphic-concepts/` as `concept_[name].md`.
 
-Produce a prompt ready to use:
+### For Image-Generation Prompts (No API / API Unavailable)
+
+Produce a prompt ready to use in external tools (Midjourney, DALL-E, Canva AI, etc.):
 ```
 PROMPT FOR: [Platform/tool]
 ---
@@ -83,24 +85,56 @@ NEGATIVE PROMPT: [What to avoid]
 ASPECT RATIO: [Recommended]
 ```
 
-### For AI-Generated Images (Using Generation Tools)
+Save prompt files to `clients/[client-name]/outputs/[month_year]/image-prompts/` as `prompt_[name].md`.
 
-1. Select the appropriate model based on the task
-2. Write a detailed, 50+ word generation prompt
-3. Run a QC check after generation:
-   - Does it match the brand colors? (if brand guide provided)
-   - Does any text in the image look correct? (AI text is often broken)
-   - Is there anything in the image that looks fake, misleading, or inappropriate?
+State clearly at the top: "These prompts require an image generation tool. Use with Midjourney, DALL-E, Canva AI, or re-run this request with GOOGLE_API_KEY or OPENAI_API_KEY configured."
+
+### For AI-Generated Images (Using GenerateImages Tool)
+
+**When to use:** Only when the user explicitly requests actual generated image files (not just concepts).
+
+**Workflow:**
+
+1. Write a detailed, 50+ word generation prompt for the specific asset
+2. Call `GenerateImages` with:
+   - `product_name`: the client folder name (e.g., `oxford-golf-academy`)
+   - `file_name`: a clear descriptive name (e.g., `oga_toptracer_social_may2026_1`)
+   - `model`: `gemini-2.5-flash-image` for social posts; `gemini-3-pro-image-preview` for ad creatives and hero images
+   - `aspect_ratio`: match the platform (`1:1` for Instagram/Facebook square, `9:16` for Reels/Stories, `3:2` for landscape Facebook, `4:5` for Facebook feed portrait)
+3. After generation, the image is saved to `mnt/[client-name]/generated_images/[file_name].png`
+4. Use `CopyFile` to copy each generated image to the client output folder:
+   - **Source:** the path returned by `GenerateImages` (shown in tool output as "Path: ...")
+   - **Destination:** `clients/[client-name]/outputs/[month_year]/graphics/`
+5. Run a QC check after generation:
+   - Does it match the brand colors and aesthetic? (check brand-guide.md)
+   - Does any text in the image look correct? (AI-generated text is often broken — flag it)
+   - Is there anything fake, misleading, or inappropriate?
    - Is it the right aspect ratio for the platform?
-4. If issues exist, run one correction pass before delivery
-5. Flag any text-in-image issues — AI-generated text usually needs to be added in a design tool like Canva
+6. If QC fails, attempt one correction pass. If still failing, fall back to a detailed image-generation prompt instead.
+7. Flag any text-in-image issues — AI text in images usually needs to be added/corrected in Canva before use
+
+**Naming convention for generated files:**
+`[client_short]_[graphic_type]_[month_year]_[number].png`
+Examples: `oga_social_toptracer_may2026_1.png`, `oga_ad_lessons_may2026_1.png`
+
+**If GOOGLE_API_KEY is not set:** Fall back to image-generation prompts (see above). State: "Image generation requires GOOGLE_API_KEY. Prompts saved to image-prompts/ folder instead."
+
+**If OPENAI_API_KEY is set and user requests OpenAI model:** Use `model="gpt-image-1.5"` — limited to 1:1, 2:3, 3:2 aspect ratios only.
 
 ## Step 4: Save Output
 
-Save all asset concepts and generated images to `clients/[client-name]/outputs/assets/`:
-- `asset_concept_[name].md` — for concept descriptions
-- `prompt_[name].md` — for generation prompts
-- `[name].[ext]` — for generated images
+Output destinations by type:
+
+| Output Type | Save To |
+|---|---|
+| Graphic concepts | `clients/[client-name]/outputs/[month_year]/graphic-concepts/concept_[name].md` |
+| Image prompts | `clients/[client-name]/outputs/[month_year]/image-prompts/prompt_[name].md` |
+| Generated image files | `clients/[client-name]/outputs/[month_year]/graphics/[file_name].png` (via CopyFile after GenerateImages) |
+
+Always report back:
+- File path of every saved item
+- Whether it is a concept, prompt, or actual generated image
+- Review status (needs human QA before client delivery)
 
 ## Step 5: Flag for Review
 
