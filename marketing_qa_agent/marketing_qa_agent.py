@@ -1,7 +1,7 @@
 from agency_swarm import Agent, ModelSettings
 from agency_swarm.tools import WebSearchTool, LoadFileAttachment, PersistentShellTool
 from openai.types.shared import Reasoning
-from shared_tools import CopyFile, ReadFile, WriteFile
+from shared_tools import CopyFile, ListDirectory, ReadFile, WriteFile
 
 from config import get_default_model, is_openai_provider
 
@@ -21,6 +21,7 @@ def create_marketing_qa_agent() -> Agent:
             CopyFile,
             ReadFile,
             WriteFile,
+            ListDirectory,
         ],
         model=get_default_model(),
         model_settings=ModelSettings(

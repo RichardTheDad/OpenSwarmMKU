@@ -3,7 +3,7 @@ from openai.types.shared import Reasoning
 from dotenv import load_dotenv
 
 from config import get_default_model, is_openai_provider
-from shared_tools import ReadFile, WriteFile
+from shared_tools import ListDirectory, ReadFile, WriteFile
 
 load_dotenv()
 
@@ -17,7 +17,7 @@ def create_orchestrator() -> Agent:
             "without human review."
         ),
         instructions="./instructions.md",
-        tools=[ReadFile, WriteFile],
+        tools=[ReadFile, WriteFile, ListDirectory],
         model=get_default_model(),
         model_settings=ModelSettings(
             reasoning=Reasoning(effort="medium", summary="auto") if is_openai_provider() else None,

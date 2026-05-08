@@ -4,7 +4,7 @@ from pathlib import Path
 from agency_swarm import Agent, ModelSettings, Agency
 from agency_swarm.tools import IPythonInterpreter, WebSearchTool
 from openai.types.shared import Reasoning
-from shared_tools import CopyFile, ReadFile, WriteFile
+from shared_tools import CopyFile, ListDirectory, ReadFile, WriteFile
 
 from config import get_default_model, is_openai_provider
 
@@ -47,7 +47,7 @@ def create_docs_agent() -> Agent:
             reasoning=Reasoning(effort="medium", summary="auto") if is_openai_provider() else None,
             response_include=["web_search_call.action.sources"] if is_openai_provider() else None,
         ),
-        tools=[WebSearchTool(), IPythonInterpreter, CopyFile, ReadFile, WriteFile],
+        tools=[WebSearchTool(), IPythonInterpreter, CopyFile, ReadFile, WriteFile, ListDirectory],
         conversation_starters=[
             "Write 4 Facebook posts for [client name] for [month].",
             "Draft a Google Business Profile post for [client name] about [topic].",

@@ -3,7 +3,7 @@ from agency_swarm.tools import IPythonInterpreter
 from openai.types.shared import Reasoning
 
 from config import get_default_model, is_openai_provider
-from shared_tools import ReadFile, WriteFile
+from shared_tools import ListDirectory, ReadFile, WriteFile
 
 # OpenAI Responses API web search — requires OPENAI_API_KEY only.
 # SEARCH_API_KEY is NOT needed for this tool.
@@ -26,6 +26,7 @@ def create_deep_research() -> Agent:
             IPythonInterpreter,               # For data processing if needed
             ReadFile,
             WriteFile,
+            ListDirectory,
         ],
         model=get_default_model(),
         model_settings=ModelSettings(
