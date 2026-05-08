@@ -69,18 +69,38 @@ Check against `clients/[client-name]/brand-guide.md` and `approved-language.md`:
 ### 5a. Logo Integrity (Graphics Only)
 
 For every generated graphic file, check:
+
 - [ ] **Logo source:** Is the logo the real file from `clients/[client-name]/assets/logo.png`, overlaid via `OverlayLogo`? Or does it appear AI-generated/redrawn?
-- [ ] **AI-redrawn logo flag:** If the logo looks blurry, distorted, stylized, or has incorrect text/colors compared to the real asset — flag as **LOGO REDRAWN BY AI — must regenerate using OverlayLogo**
-- [ ] **No internal labels burned in:** The graphic must not contain text like "Concept Draft," "Needs client asset," "No offers on file," or any other internal workflow note
+  - If logo looks blurry, distorted, stylized, wrong colors, wrong text, or redesigned in any way → **FAIL: LOGO REDRAWN BY AI — must delete and regenerate background, then apply OverlayLogo**
+  - If logo was added via `CombineImages` (passes image to AI model) → **FAIL: LOGO REDRAWN BY AI — CombineImages must not be used for logos**
+
+- [ ] **No internal labels burned into image pixels:**
+  Check for any of the following visible in the image:
+  - "Concept Draft" / "CONCEPT DRAFT" / "Draft" / "DRAFT"
+  - "Needs client asset" / "No logo on file" / "No offers on file"
+  - "Pending approval" / "For review" / version numbers
+  - Any watermark, status banner, or workflow annotation
+  - If found → **FAIL: INTERNAL LABEL ON IMAGE — regenerate background with negative prompt excluding all text overlays except approved copy**
+
+- [ ] **No logo drawn by AI in graphic background:** Even if not labeled as the real logo, does the background contain any crest, badge, emblem, monogram, or stylized text that imitates a logo?
+  - If yes → **FAIL: AI-GENERATED LOGO ELEMENT — remove from background prompt, use OverlayLogo only**
+
 - [ ] **Raw background exists:** A `_raw_bg.png` file should exist alongside every `_final.png`
-- [ ] **Logo pending note:** If no `logo.png` exists in assets, the markdown output should say "Logo overlay pending" — and no logo should appear on the graphic at all
+  - If missing → **FLAG: No raw background on file — re-run OverlayLogo to produce both files**
+
+- [ ] **Logo pending note:** If no `logo.png` exists in assets:
+  - Companion markdown must say "Logo overlay pending — add official logo to `assets/logo.png` and re-run OverlayLogo"
+  - No logo-like element should appear on the graphic at all
+  - If a logo-like element appears anyway → **FAIL: AI drew a placeholder logo — regenerate**
 
 Add to QA report section:
 ```
 LOGO INTEGRITY:
-- [ ] Logo appears real (from assets/) vs AI-generated: [REAL / AI-REDRAWN / ABSENT]
-- [ ] Internal labels on graphic: [NONE / FOUND — list them]
-- [ ] Raw background file present: [YES / NO]
+- [ ] Logo source: [REAL FILE via OverlayLogo / AI-REDRAWN — FAIL / ABSENT — OK if pending noted]
+- [ ] Internal labels on image: [NONE / FOUND: list exact text — FAIL]
+- [ ] AI-generated crest/badge/emblem in background: [NONE / FOUND — FAIL]
+- [ ] Raw background file present: [YES / NO — FLAG if missing]
+- [ ] Logo pending note in markdown (if no logo.png): [PRESENT / MISSING]
 ```
 
 ### 5b. Facility & Location Imagery (Graphics Only)

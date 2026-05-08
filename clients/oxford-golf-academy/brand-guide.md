@@ -198,3 +198,33 @@ Prefer:
 
 If a real Oxford Golf Academy photo is not available, do not substitute fake location imagery.
 Use brand-forward graphic design instead.
+
+---
+
+## Preferred Promo Graphic Style (Canonical)
+
+This is the approved visual direction for Oxford Golf Academy promotional graphics. All AI-generated promo graphics must follow this spec unless the client explicitly approves a different direction.
+
+**Format:** 1080×1080 px square PNG (Facebook/Instagram default)
+
+**Background:** Deep charcoal or near-black with warm gold/amber radial glow and subtle grain texture. No flat solid black. No real-world scenes. No facility, sky, grass, or course imagery.
+
+**Typography:**
+- Bold white or gold headline — large, centered, visually dominant
+- Clean modern sans-serif only
+- 1–2 line subhead in white or light gray
+- Short verb-led CTA ("Book Your Lesson", "Call 352-446-4456")
+
+**CTA button:** Gold/amber filled, rounded corners, dark contrasting text. Lower-center placement.
+
+**Golf motifs (optional):** Abstract swing arc lines, golf ball with motion blur or glow, club silhouette, tee icon, Toptracer-style trajectory lines. All in gold/amber on dark. No people unless explicitly requested and clearly abstract.
+
+**Logo:** Applied via Pillow overlay after generation. Clean open zone reserved in upper-left. Never drawn by AI.
+
+**Internal labels:** Never on the image. "Concept Draft", "Draft", "Needs client asset", and all workflow notes belong in the companion markdown only.
+
+**This style is NOT:**
+- Luxury resort or country club aesthetic
+- Stock-photo sports composite
+- Scene-based composition with real or implied location
+- Generic golf brand template
