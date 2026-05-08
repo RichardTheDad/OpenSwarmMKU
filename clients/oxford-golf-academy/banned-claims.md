@@ -6,62 +6,63 @@ The Marketing QA Agent checks every deliverable against this list. Any content c
 
 ## Absolute Bans — Never Use Under Any Circumstances
 
-These claims are prohibited in all content, all platforms, at all times:
-
 ### Performance Guarantees
 - "Guaranteed improvement"
 - "Guaranteed to lower your score"
 - "Guaranteed to improve your handicap"
-- "You will improve" (as a stated fact or promise)
+- "You will improve" (stated as a fact or promise)
 - "Results guaranteed"
-- "Satisfaction guaranteed" (unless this is explicitly an offered, documented policy — it is not currently confirmed)
+- "Satisfaction guaranteed" (not a documented, confirmed policy)
 - Any implied promise of a specific golf outcome
 
 ### Superlatives and Unverified Rankings
-- "Best golf academy in Florida"
-- "Best golf instruction in The Villages area"
-- "#1 golf academy" (in any form, unless backed by a verifiable, cited source)
-- "Top-rated" (unless backed by a verifiable platform rating with source and date)
-- "Premier golf academy" (implies exclusivity/ranking — not confirmed)
-- "World-class instruction" (generic and unverifiable)
-- "Award-winning" (unless a specific award is confirmed with name, issuer, and year)
 
-### Unconfirmed Credentials
-- "PGA-certified" or "PGA professional" (unless client confirms this in writing — do not assume)
-- "TPI certified" or any other instructor certification (unless confirmed)
-- "USGTF certified" or similar (unless confirmed)
-- "X years of teaching experience" (unless specific number is confirmed by client)
-- "Former tour player" or similar (unless confirmed)
+**Important note:** The redesign uses "Central Florida's Premier Golf Academy" as a section heading. This is client-authored copy on their own site. Do NOT use this phrase in third-party marketing content (ads, social, GBP) without explicit client confirmation that they want it in marketing materials — it is a ranking claim that cannot be verified externally.
+
+- "Best golf academy in Florida" — banned
+- "Best golf instruction in The Villages area" — banned
+- "#1 golf academy" (any form without verifiable cited source) — banned
+- "Top-rated" (without a verifiable platform rating, source, and date) — banned
+- "Premier golf academy" (in marketing copy) — needs client confirmation before use
+- "World-class instruction" — banned (generic, unverifiable; use specific instructor credentials instead)
+- "Award-winning" (without a specific award name, issuer, and year) — banned
+- "The best in Central Florida" — banned
+
+### Unverified Instructor Claims
+- Do not invent instructor credentials beyond what is listed in `client-brief.md`
+- Do not claim any instructor is "PGA-certified" without specifying their actual credential (PGA Member, PGA Life Member, PGA Assistant, etc.)
+- Do not attribute Paul Brown's "75,000+ lessons" to any other instructor
+- Do not claim any instructor is a "former tour player" unless confirmed
+- Do not fabricate instructor bio details, teaching philosophy, or years at Oxford Golf Academy
 
 ### Unconfirmed Pricing
-- Any specific price (e.g., "$50 per lesson," "$20 for range time")
-- "Affordable pricing" combined with a specific number
-- "Starting at $X" (unless confirmed)
-- "Best value in the area" (unverifiable)
-- "Cheap lessons" / "Discount golf instruction" (potentially brand-damaging even if true)
+- Never publish a range ball price — pricing is seasonal and the client explicitly does not publish it
+- Do not invent lesson pricing, program pricing, or package pricing not listed in `services.md`
+- Do not say "affordable" followed by a made-up number
+- "Best value in the area" — unverifiable, banned
+- "Cheap lessons" / "Discount golf" — potentially brand-damaging, banned
 
 ### Unconfirmed Offers and Promotions
-- "Limited-time offer" (unless the offer and its end date are in offers.md)
-- "Special discount" (unless confirmed in offers.md)
-- "Introductory pricing" (unless confirmed in offers.md)
-- "Free [anything]" (unless confirmed in offers.md)
-- "Save X%" (unless confirmed in offers.md)
-- "This month only" / "This week only" (unless confirmed with specific dates)
-- Any seasonal promotion not confirmed with exact dates and details
+- "Limited-time offer" (unless confirmed in `offers.md` with end date)
+- "Special discount" (unless confirmed in `offers.md`)
+- "Free [anything]" (unless confirmed in `offers.md`)
+- "Save X%" (unless confirmed in `offers.md`)
+- "Introductory pricing" (unless confirmed in `offers.md`)
+- Any seasonal promotion not confirmed with exact dates and terms
 
 ### Unconfirmed Events
-- Any event date (lesson series start dates, tournaments, clinics, open houses)
-- "Join us on [date]" for any event not confirmed in writing by client
-- "Upcoming events" (unless client has provided confirmed event details)
-- "Holiday specials" (unless confirmed in offers.md)
+- Any event date (clinics, tournaments, open houses) not confirmed by client in writing
+- "Join us on [date]" for any unconfirmed event
+- "Upcoming clinics every [day]" — clinic scheduling varies seasonally; do not imply regular schedule
+- "Holiday specials" (unless confirmed in `offers.md`)
 
 ### Fake Social Proof
-- Invented testimonials or customer quotes not in testimonials.md
+- Invented testimonials or quotes not in `testimonials.md`
 - "Our students say..." followed by invented language
-- "Hundreds of happy golfers" (unless the number is verified and sourced)
-- "5-star rated" (unless the rating is current, verifiable, and the platform/count is cited)
-- "Students love our..." followed by invented sentiment
-- Implied reviews: "Don't take our word for it" (OK only if real testimonials follow)
+- "Hundreds of happy golfers" (specific number not confirmed)
+- "Thousands of students" (not confirmed)
+- "5-star rated" (unless current, verifiable, with platform and count cited)
+- "Don't take our word for it" (OK only when followed by real quotes from `testimonials.md`)
 
 ### Competitor References
 - Do not name specific local competitors in any content
@@ -70,49 +71,49 @@ These claims are prohibited in all content, all platforms, at all times:
 
 ### Health and Injury Claims
 - "Golf is good for your health" as a specific medical claim
-- "Our instruction prevents injury" or similar
-- Any claim that implies health, medical, or physical outcome guarantees
+- "Our instruction prevents injury" or similar physical/health outcome guarantees
 
----
+### Generic AI Filler — Banned Across All Content
 
-## Claims That Need Client Confirmation Before Use
+The Marketing QA Agent flags these as unacceptable filler regardless of factual accuracy:
 
-These are useful claims but must be verified before appearing in any content. Mark them: **[Needs client confirmation]**
-
-- "Family-owned and operated" — confirm before using
-- "Locally owned and operated" — confirm before using
-- "Serving Oxford since [year]" — confirm year before using
-- "Open 7 days a week" or any specific hours claim — confirm before using
-- "Same-day lessons available" — confirm before using
-- "Walk-ins welcome" — confirm before using
-- "Over X years of experience" — confirm exact number before using
-- Any specific instructor name or bio detail
-- "Parties and events" as a service (listed as unconfirmed in services.md)
-- Any service not currently listed in services.md
-
----
-
-## Generic AI Filler — Banned Across All Content
-
-The Marketing QA Agent also flags these patterns as generic, unacceptable filler:
 - "In today's fast-paced world..."
 - "We're passionate about golf"
 - "We're committed to excellence"
 - "Your success is our priority"
 - "Dedicated team of professionals"
 - "One-stop shop" / "one-stop solution"
-- "Cutting-edge technology" (use "Toptracer" specifically instead)
-- "State-of-the-art facility" (use specific features instead)
+- "Cutting-edge technology" — use "Toptracer" specifically instead
+- "State-of-the-art facility" — describe the specific feature instead
 - "Synergy," "leverage," "solutions" (corporate jargon)
-- "Take your game to the next level" (overused filler — acceptable only if followed by a specific, concrete description of what that means for this client)
+- "Take your game to the next level" — overused filler; acceptable ONLY if followed by a concrete, specific description
+- "World-class instruction" — use specific instructor credentials instead
 - Any sentence that could be copy-pasted to describe any golf facility anywhere
+- "Unleash your potential" / "Transform your game" (hype-heavy, vague)
+
+---
+
+## Claims That Need Client Confirmation Before Use
+
+Mark these: **[Needs client confirmation]**
+
+- "Family-owned and operated" — confirm before using
+- "Locally owned and operated" — confirm before using
+- "Serving Oxford since [year]" — founded year not confirmed; ask client
+- "Walk-ins welcome" — confirm before using
+- "Same-day lessons available" — confirm before using
+- "Over X years of experience" — as an aggregate claim; individual instructor bios are confirmed separately
+- "Central Florida's Premier Golf Academy" — appears on their own redesign site but confirm client wants this in marketing materials
+- Any instructor detail not in `client-brief.md`'s team table
+- Specific clinic schedule ("Clinics every Tuesday") — verify with client before publishing any schedule
+- Any service not listed in `services.md`
 
 ---
 
 ## Publishing Rules (Applies to All Agents)
 
 - Do not post, schedule, or publish any content automatically
-- Do not send content to the client directly without explicit user instruction
+- Do not send content to the client without explicit user instruction
 - All content must pass Marketing QA Agent review before being presented to the user as final
 - All final content must be reviewed and approved by the human user before client delivery
 - Mark anything uncertain as: **[Needs client confirmation before use]**

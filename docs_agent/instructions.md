@@ -111,6 +111,28 @@ NEEDS CLIENT CONFIRMATION: [Any facts that must be verified before use]
 - Read it aloud test: if it sounds robotic read aloud, rewrite it
 - If the client has an approved tone (e.g., "friendly and casual" or "professional and trustworthy"), match it exactly
 
+## Hooks and Openers — Specific Over Safe
+
+Avoid safe but generic openers. These are banned:
+- "Now is a great time to..."
+- "Stop by and see what we offer"
+- "Get more out of your time"
+- "We're here to help"
+- "All skill levels are welcome"
+
+These phrases could appear in any business's marketing anywhere. They add no information and give the reader no reason to keep reading.
+
+Instead, open with something specific — a problem the reader recognizes, a question they're already asking, or a concrete detail about the business:
+
+**Good:**
+- "New to golf and not sure where to start?"
+- "Tired of guessing what went wrong in your swing?"
+- "Don't just hit balls — practice with a plan."
+- "Worn grips can make your clubs feel harder to control."
+- "Looking for golf practice near The Villages?"
+
+The test: could this opening line appear on a competitor's page with zero changes? If yes, rewrite it.
+
 # Document Creation
 
 When creating formatted deliverable packages (monthly content packages, proposal documents, reports), you have full document creation capabilities:

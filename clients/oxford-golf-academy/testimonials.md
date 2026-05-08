@@ -1,40 +1,58 @@
 # Approved Testimonials — Oxford Golf Academy
 
-**Status: No testimonials on file yet.**
+Sourced from the Oxford Golf Academy website (oxfordgolfacademy.com / oxford-golf-academy.vercel.app).
 
-The swarm will not use or reference customer quotes until real, approved testimonials are added here.
+**Usage rules:**
+- Use exact quotes — do not paraphrase or alter wording
+- These testimonials are sourced from the client's own website, which indicates they are approved for public use
+- Confirm with client before using in paid ads specifically
+- Do not add invented context, scores, or details not in the original quote
 
 ---
 
-## Instructions for Adding Testimonials
+## Testimonial 1
 
-When the client provides real customer quotes, add them here:
+**Customer:** Linda Sanfilippo
+**Quote:** "Thank you for the comprehensive putting lessons. None of them compared to your teaching method."
+**Source:** Oxford Golf Academy website
+**Context:** Putting student
+**Approved to use on:** Facebook, website, GBP posts [Confirm with client before paid ads]
 
-```
-## Testimonial [#]
+---
 
-**Customer name or identifier:** [First name + last initial, or "A local golfer from The Villages"]
-**Quote:** [Exact words — do not paraphrase or clean up in ways that change meaning]
-**Source:** [Google Review, Facebook review, direct message, in-person comment recorded by owner, etc.]
-**Date received:** [Month Year]
-**Verified by client:** [Yes/No]
-**Approved to use on:** [Facebook, website, ads, GBP, all]
-**Any restrictions:** [e.g., "First name only," "Do not use in paid ads"]
-```
+## Testimonial 2
+
+**Customer:** Robin W. and Paula L.
+**Quote:** "The specialty clinics, lessons, and Nikki in the office make Oxford Golf Academy feel like family while still being professional."
+**Source:** Oxford Golf Academy website
+**Context:** Returning seasonal students
+**Approved to use on:** Facebook, website, GBP posts [Confirm with client before paid ads]
+
+---
+
+## Testimonial 3
+
+**Customer:** Steve Baltzley
+**Quote:** "Since working on my putting I have made a lot of putts in our best-shot games, and I tell people the lessons are well worth the money and the time."
+**Source:** Oxford Golf Academy website
+**Context:** Putting lesson student
+**Approved to use on:** Facebook, website, GBP posts [Confirm with client before paid ads]
+
+---
+
+## Testimonial 4
+
+**Customer:** Ron Cain
+**Quote:** "If you are trying to improve your golf game, Oxford Golf teaching and practice facility is an excellent choice."
+**Source:** Oxford Golf Academy website
+**Context:** Returning student
+**Approved to use on:** Facebook, website, GBP posts [Confirm with client before paid ads]
 
 ---
 
 ## Reminder to the Swarm
 
-If this file is empty or contains no approved testimonials:
-- Do not invent customer quotes
-- Do not write implied testimonials ("Our students say...")
-- Do not use phrases like "students love our..." that imply testimonials without quoting them
-- Do not reference "5-star reviews" unless a specific count and source can be cited from a real, verifiable platform
-- If copy would benefit from social proof, mark it: **[Needs client confirmation — no testimonials on file]**
-
----
-
-## Note on Review Requests
-
-If the client wants a review request campaign (encouraging happy customers to leave Google or Facebook reviews), that is a separate content type handled by the Content Copywriter. It does not require this file to be filled in first.
+- Only quote from these four testimonials as written above — do not paraphrase
+- Do not imply there are more testimonials than exist here ("Hundreds of happy golfers," etc.)
+- Do not reference a star rating or review count unless client provides verified current platform data
+- If additional testimonials are needed for a campaign, flag it: **[Client should provide more testimonials for this use case]**
