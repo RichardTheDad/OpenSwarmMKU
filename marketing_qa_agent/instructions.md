@@ -74,13 +74,25 @@ Check against `clients/[client-name]/brand-guide.md` and `approved-language.md`:
 
 ### 5a. Visual Style Quality (Graphics Only)
 
-For every generated graphic, check visual style quality independent of logo and facility rules:
+For every generated graphic, check visual style quality independent of logo and facility rules.
+
+**Core render principle:** "Keep the ad visually strong and premium, but avoid excessive effects that make it look artificially generated."
 
 - [ ] **Unreadable text:** Is all text legible at 1080×1080 display size? Check contrast, font size, text-on-texture collisions.
   - If text is unreadable or borderline → **FLAG: UNREADABLE TEXT — increase contrast or simplify background behind text**
 - [ ] **Weak or missing CTA:** Is the CTA clearly visible and action-oriented?
   - Missing CTA → **FLAG: NO CTA**
   - CTA present but buried in small/low-contrast text → **FLAG: WEAK CTA — make CTA visually dominant**
+- [ ] **Poor spacing or visual hierarchy:** Does the layout feel cramped, unbalanced, or lacking clear reading order (headline → subhead → CTA)?
+  - If yes → **FLAG: POOR VISUAL HIERARCHY — elements need better spacing and clear priority order**
+- [ ] **Excessive sparkle or noise texture:** Does the graphic show heavy particle effects, scattered sparkle clouds, dense grain overlays, or noisy texture that competes with the text?
+  - If yes → **FLAG: EXCESSIVE SPARKLE/NOISE — reduce decorative effects, simplify background texture**
+- [ ] **Overdone glow effects:** Are there multiple overlapping halos, radial burst effects, neon bloom trails, or glow stacking that makes the image look like a fantasy poster rather than a real ad?
+  - If yes → **FLAG: OVERDONE GLOW — use one controlled accent glow maximum, remove compound glow layers**
+- [ ] **Synthetic or fantasy rendering:** Does the graphic look like a cinematic movie poster, a video game splash screen, or an AI-generated fantasy illustration rather than a polished promotional ad for a local golf business?
+  - If yes → **FLAG: SYNTHETIC AI RENDERING — regenerate with controlled prompt targeting a real designed-ad aesthetic, not cinematic/fantasy render style**
+- [ ] **"AI sports poster" feel:** Does the overall impression feel like a generic AI-generated sports image (dramatic particle trails, god-rays, glowing sphere, extreme lens flares, over-rendered metallic text) rather than a clean branded local-business graphic?
+  - If yes → **FLAG: AI SPORTS POSTER AESTHETIC — reduce effects, simplify composition, prioritize typography and brand clarity over visual spectacle**
 - [ ] **Repetitive style in batch:** When reviewing 2+ graphics together, do they all use the same layout?
   - Yes → **FLAG: REPETITIVE STYLE — campaign lacks visual variety. Each graphic should use the style appropriate for its specific campaign goal.**
 - [ ] **Style-goal mismatch:** Does the graphic style match the campaign goal?
@@ -92,6 +104,11 @@ Add to QA report section:
 VISUAL STYLE QUALITY:
 - [ ] Text readability: [PASS / FLAG: describe issue]
 - [ ] CTA visibility: [PASS / FLAG: describe issue]
+- [ ] Visual hierarchy/spacing: [PASS / FLAG: describe issue]
+- [ ] Excessive sparkle/noise: [PASS / FLAG: describe issue]
+- [ ] Overdone glow effects: [PASS / FLAG: describe issue]
+- [ ] Synthetic/fantasy rendering: [PASS / FLAG: describe issue]
+- [ ] "AI sports poster" feel: [PASS / FLAG: describe issue]
 - [ ] Style repetition (batch): [N/A — single graphic / PASS — varied / FLAG: repetitive]
 - [ ] Style-goal match: [PASS / FLAG: describe mismatch and suggest correct style]
 ```
@@ -217,6 +234,11 @@ BRAND FIT:
 VISUAL STYLE QUALITY (graphics only):
 - Text readability: [PASS / FLAG]
 - CTA visibility: [PASS / FLAG]
+- Visual hierarchy/spacing: [PASS / FLAG]
+- Excessive sparkle/noise: [PASS / FLAG]
+- Overdone glow effects: [PASS / FLAG]
+- Synthetic/fantasy rendering: [PASS / FLAG]
+- AI sports poster feel: [PASS / FLAG]
 - Style repetition (batch): [N/A / PASS / FLAG]
 - Style-goal match: [PASS / FLAG: describe]
 

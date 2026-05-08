@@ -153,11 +153,12 @@ Use the brand guide (colors, typography, voice) as the foundation, but choose th
 #### Style Specs Per Direction
 
 **Premium dark/gold sports promo**
-- Deep charcoal or near-black textured background
-- Warm gold/amber radial glow
-- Bold white or gold headline — large, centered
-- Abstract swing arc, golf ball glow, or trajectory lines in gold
-- Gold/amber CTA button, lower-center
+- Deep charcoal or near-black background — flat or subtle texture, not heavy noise/grain
+- Warm gold/amber accent: single controlled gradient or one directional glow — not multiple overlapping halos or radial burst effects
+- Abstract golf motif in gold: one clean swing arc line, a single trajectory path, or a golf ball graphic — not a cluster of sparkles, trails, or energy bursts
+- Bold white or gold headline — large, centered, strong contrast
+- Gold/amber CTA element, lower-center
+- **Render feel target:** polished sports ad, not cinematic fantasy poster. Strong and premium, not synthetic.
 - Use when: high-energy promo, season launch, performance focus
 
 **Clean typography-first ad**
@@ -229,8 +230,38 @@ These apply regardless of which style is chosen:
 - **Logo zone:** Clean uncluttered space in upper-left (or as appropriate for the layout)
 - **Logo application:** Always via OverlayLogo — never drawn by AI
 
+#### Render Quality Standard
+
+**Principle: Keep the ad visually strong and premium, but avoid excessive effects that make it look artificially generated.**
+
+The target is a real designed promotional ad — not a cinematic AI poster, not a fantasy sports rendering, not a video-game splash screen.
+
+**Keep:**
+- Strong contrast between background and text
+- Bold, readable headline as the dominant element
+- One controlled accent (single gradient, single glow direction, single trajectory line)
+- Clean CTA element that is immediately visible
+- High-energy, premium-feeling composition
+
+**Avoid:**
+- Multiple overlapping glow layers or radial burst effects stacked on each other
+- Scattered sparkle clouds, particle fields, or heavy atmospheric haze
+- Dense noise/grain texture that visually competes with text
+- God-rays, lens flares, or volumetric light shafts
+- Over-rendered metallic or chrome text effects
+- Fantasy/cinematic depth-of-field with dramatic bokeh
+- Neon bloom or electric-arc trails that look like sci-fi or esports graphics
+- Any effect cluster that makes the graphic feel synthetic rather than designed
+
+**Prompt language that anchors the render quality:**
+- "graphic design style, not photorealistic, not cinematic"
+- "clean controlled lighting, single directional ambient glow"
+- "promotional ad aesthetic, designed not rendered"
+- "minimal decorative effects, strong typographic layout"
+- "polished sports marketing graphic, not movie poster, not fantasy illustration"
+
 #### Negative prompt to always include for OGA graphics:
-`no golf course, no fairway, no green, no clubhouse, no driving range building, no luxury resort, no aerial view, no people posed on course, no fake location, no concept draft watermark, no draft label, no status text, no internal notes, no banners, no text overlays except approved graphic copy, no logo drawn by AI, no crest, no badge, no emblem`
+`no golf course, no fairway, no green, no clubhouse, no driving range building, no luxury resort, no aerial view, no people posed on course, no fake location, no concept draft watermark, no draft label, no status text, no internal notes, no banners, no text overlays except approved graphic copy, no logo drawn by AI, no crest, no badge, no emblem, no sparkles, no particle clouds, no scattered light particles, no god rays, no lens flares, no neon bloom, no fantasy rendering, no cinematic depth of field, no over-rendered metallic text, no heavy grain texture, no multiple overlapping glows`
 
 ### Facility & Location Imagery — Decision Gate
 
