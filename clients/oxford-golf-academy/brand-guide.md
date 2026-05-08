@@ -106,6 +106,12 @@ Provide designer or CSS file with confirmed values for:
 - Imagery that does not represent the Oxford Golf Academy facility
 - Overly staged or artificially produced imagery
 - Old website's photography style unless it matches the redesign's aesthetic
+- AI-generated scenes presented as the real facility
+- Golf course landscapes, clubhouse imagery, or aerial views not confirmed as the actual location
+- Imagery that implies a luxury resort, private country club, or upscale golf property
+
+**When real facility photos are not available:**
+Do not substitute AI-generated or stock facility imagery. Use brand-forward graphic design instead — see **Visual Asset Restrictions** section below.
 
 **Image style:** Modern, practical, and warm — real people, real instruction, real facility.
 
@@ -164,5 +170,31 @@ See `approved-language.md` for full language guidance.
 
 **Facebook/Instagram:** Use redesign color palette, card-style visual layout, real photography, short direct copy, always include CTA
 **Google Business Profile:** Clean, professional, no hashtags, location reference natural, feature-specific focus
-**Ads (Facebook/Google):** Match CTA button style from redesign, use facility photography, headline matches tagline energy
+**Ads (Facebook/Google):** Match CTA button style from redesign, use real confirmed facility photography only (no generated scenes), headline matches tagline energy
 **Website updates:** Must match redesign — never revert to old site's visual style
+
+---
+
+## Visual Asset Restrictions
+
+Do not use imagery that suggests a luxury golf resort, private country club, or a facility that may not reflect the real Oxford Golf Academy location.
+
+Avoid:
+- wide golf course landscapes
+- premium clubhouse visuals
+- polished resort-like range photos
+- fake facility photography
+- fake aerial course views
+- fake high-end golf property imagery
+
+Prefer:
+- abstract golf-themed backgrounds
+- clean graphic shapes
+- golf ball / tee / club / swing-detail motifs
+- Toptracer-inspired line/data visuals
+- dark premium branded backgrounds
+- typography-first layouts
+- minimal icon-based sports visuals
+
+If a real Oxford Golf Academy photo is not available, do not substitute fake location imagery.
+Use brand-forward graphic design instead.

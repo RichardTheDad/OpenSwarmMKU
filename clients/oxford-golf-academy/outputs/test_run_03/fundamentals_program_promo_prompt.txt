@@ -1,0 +1,18 @@
+Create a square 1080x1080 promotional graphic for Oxford Golf Academy in a dark/gold redesign style. Use a premium but welcoming feel, clean spacing, readable typography, and beginner-focused messaging.
+
+Final layout direction: leave the upper-left area clean and open for the real logo overlay. Place the main headline and supporting copy in the center-right area with clear hierarchy. Include a simple CTA that is easy to read, such as:
+Call 352-446-4456
+or
+Book Your Lesson
+
+Scene direction: a realistic Oxford Golf Academy practice-range / Toptracer-bay style setting at sunset or early evening, with warm amber/gold lights, charcoal shadows, and a local-facility feel — not a generic stock golf scene, not a country-club landscape. Show subtle beginner-friendly coaching energy, such as an instructor and a new golfer in the midground, but keep the composition clean and not crowded.
+
+Brand style: elegant dark charcoal backgrounds with gold accents, thin premium lines, and soft lighting. Do not include any logo, badge, crest, or emblem in the generated image. Do not recreate or alter the logo.
+
+Text to include in the graphic, if rendered cleanly and legibly:
+The Fundamentals Program
+Beginner Golf Lessons
+A complete introduction to golf
+Call 352-446-4456
+
+Overall tone: premium, modern, approachable, local, and beginner-friendly. No internal notes, no draft labeling, no extra promotional claims, no fake offers, no stock-photo look.

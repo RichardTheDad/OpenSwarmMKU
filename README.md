@@ -239,6 +239,15 @@ If no `logo.png` exists, the agent generates the background and writes "Logo ove
 
 **The Marketing QA Agent checks every graphic** for AI-redrawn logos and flags them automatically.
 
+### Facility & Location Imagery Policy
+
+The Creative Asset Agent **never generates fake facility imagery** — no AI-created golf course landscapes, driving range scenes, clubhouse visuals, or aerial course views presented as the client's real location.
+
+- If the client has supplied real photos → use them
+- If no real photos exist → use brand-forward graphic design (abstract backgrounds, golf motif elements, typography-first layouts)
+
+This is enforced in the agent instructions and checked by the Marketing QA Agent. Any graphic implying a fake location is flagged and routed back for regeneration.
+
 ### Notes
 
 - AI-generated text inside images is often broken — always check before use
